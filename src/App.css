@@ -91,6 +91,7 @@ body {
   height: 75px;
   width: 75px;
 }
+
 .profile-details-container {
   margin-left: 10px;
 }
@@ -106,6 +107,7 @@ body {
 .account-container {
   margin-top: 40px;
 }
+
 .today-heading {
   font-size: 15px;
   font-weight: 500;
@@ -119,6 +121,9 @@ body {
   font-size: 11px;
   line-height: 10px;
 }
+.contribution-mobile-text {
+  display: block;
+}
 .contributions-amount {
   font-size: 15px;
   font-weight: 700;
@@ -129,6 +134,7 @@ body {
   font-weight: 700;
   margin-bottom: 0px;
 }
+
 .account-option {
   background-color: #4f46e5;
   padding: 12px 25px 12px 25px;
@@ -166,6 +172,7 @@ body {
   font-size: 13px;
   font-weight: 500;
 }
+
 .retirement-income-container {
   background-color: #ffffff;
   font-family: 'Roboto';
@@ -188,6 +195,9 @@ body {
   padding: 5px;
   margin-right: 30px;
   min-width: 130px;
+}
+.percent-income-view {
+  display: flex;
 }
 .hr-line {
   color: #4f46e5;
@@ -305,6 +315,7 @@ body {
   margin-top: 0px;
   text-align: center;
 }
+
 .retirement-strategy-container {
   padding: 30px;
   width: 25%;
@@ -380,4 +391,242 @@ body {
 }
 .question-text {
   font-size: 13px;
+}
+.mobile-view-icons {
+  display: none;
+}
+.bell-icon-mobile-view-container {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .responsive-home-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+  .side-bar-container {
+    display: none;
+  }
+  .bell-icon-mobile-view-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .profile-container {
+    background-color: #ffffff;
+  }
+  .profile-img {
+    height: 65px;
+    width: 65px;
+  }
+  .profile-name {
+    font-size: 25px;
+  }
+
+  .account-container {
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+  .today-heading {
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+  .balance-amount {
+    margin-top: 0px;
+    line-height: 40px;
+    font-size: 30px;
+  }
+  .balance-contribution-text {
+    display: none;
+  }
+  .contribution-mobile-text {
+    font-size: 11px;
+  }
+  .contribution-interest-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .account-option {
+    width: 350px;
+    max-width: 90%;
+  }
+  .recent-transactions-container {
+    padding-top: 30px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
+  .retirement-income-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .retirement-title {
+    width: 350px;
+    margin-bottom: 0px;
+  }
+  .retirement-heading {
+    width: 350px;
+    margin-top: 0px;
+    line-height: 30px;
+  }
+  .goals-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .goal-mobile-view {
+    width: 280px;
+  }
+  .percent-income-view {
+    display: flex;
+    margin-right: 10px;
+  }
+  .contribution-heading {
+    width: 350px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .tag-container {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+  }
+  .tag {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-right: 20px;
+  }
+  .box {
+    margin-left: 0px;
+  }
+  .empty1 {
+    margin-right: 35px;
+  }
+  .empty2 {
+    margin-right: 40px;
+  }
+  .empty3 {
+    margin-right: 55px;
+  }
+  .tag-para {
+    font-size: 11px;
+    margin-bottom: 0px;
+  }
+  .tag-heading {
+    font-size: 14px;
+    margin-top: 0px;
+    line-height: 25px;
+  }
+  .bar-chart {
+    width: 250px;
+  }
+  .peers-heading {
+    width: 350px;
+  }
+  .peers-text {
+    width: 350px;
+  }
+  .comparison-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .details-container {
+    width: 280px;
+    margin-left: 0px;
+  }
+  .container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .compare-text {
+    padding-right: 30px;
+  }
+  .radial-box {
+    width: 60px;
+  }
+  .retirement-strategy-container {
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }
+  .strategy-container {
+    background-color: #f1f5f9;
+    width: 300px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+  .retirement-heading {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .contribution-text {
+    margin-left: 10px;
+  }
+  .input-container {
+    margin-left: 10px;
+  }
+  .input-text {
+    height: 3px;
+  }
+
+  .subtext-container {
+    margin-top: 10px;
+    padding-top: 0px;
+    margin-left: 10px;
+  }
+  .button-container {
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 300px;
+  }
+  .update-btn {
+    max-width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .view-docs {
+    display: none;
+  }
+  .question-container {
+    display: none;
+  }
+  .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    height: 55px;
+    padding: 10px;
+  }
+  .mobile-view-icons {
+    display: flex;
+  }
+  .icon-button {
+    border: none;
+    background-color: #ffffff;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  .active-icon {
+    background-color: #4f46e5;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .icon {
+    height: 28px;
+    width: 28px;
+  }
 }

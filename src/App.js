@@ -146,6 +146,9 @@ class App extends Component {
 
   renderProfile = () => (
     <div className="profile-container">
+      <div className="bell-icon-mobile-view-container">
+        <VscBellDot size={18} />
+      </div>
       <div className="profile-pic-details-container">
         <img
           src="https://res.cloudinary.com/dcci6hybb/image/upload/v1640866012/1640865894420_vlj20b.png"
@@ -161,33 +164,37 @@ class App extends Component {
         <h1 className="today-heading">Today</h1>
         <h1 className="balance-amount">$19,892</h1>
         <p className="account-text">Account Balance</p>
-        <h3 className="contributions-amount">$4,000</h3>
-        <p className="account-text">Year-to-Date Contributions</p>
-        <h3 className="interest-amount">$1,892</h3>
-        <p className="account-text">Total Interest</p>
+        <div className="contribution-interest-container">
+          <div>
+            <h3 className="contributions-amount">$4,000</h3>
+            <p className="balance-contribution-text">
+              Year-to-Date Contributions
+            </p>
+            <p className="contribution-mobile-text">Year-to-Date</p>
+          </div>
+          <div>
+            <h3 className="interest-amount">$1,892</h3>
+            <p className="account-text">Total Interest</p>
+          </div>
+        </div>
+
         <button type="button" className="account-option">
           I want to <GoTriangleDown className="triangle" />
         </button>
-        <div className="recent-transactions-container">
-          <h1 className="transactions-heading">Recent Transactions</h1>
-          <div className="transaction-details-container">
-            <p className="transaction-date">2020-08-07</p>
-            <p className="transaction-text">
-              Withdrawal Transfer to Bank-XXX11
-            </p>
-          </div>
-          <div className="transaction-details-container">
-            <p className="transaction-date">2020-07-21</p>
-            <p className="transaction-text">
-              Withdrawal Transfer to Bank-XXX11
-            </p>
-          </div>
-          <div className="transaction-details-container">
-            <p className="transaction-date">2020-07-16</p>
-            <p className="transaction-text">
-              Withdrawal Transfer to Bank-XXX11
-            </p>
-          </div>
+      </div>
+      <div className="recent-transactions-container">
+        <h1 className="transactions-heading">Recent Transactions</h1>
+        <div className="transaction-details-container">
+          <p className="transaction-date">2020-08-07</p>
+          <p className="transaction-text">Withdrawal Transfer to Bank-XXX11</p>
+        </div>
+        <div className="transaction-details-container">
+          <p className="transaction-date">2020-07-21</p>
+          <p className="transaction-text">Withdrawal Transfer to Bank-XXX11</p>
+        </div>
+        <div className="transaction-details-container">
+          <p className="transaction-date">2020-07-16</p>
+          <p className="transaction-text">Withdrawal Transfer to Bank-XXX11</p>
         </div>
       </div>
     </div>
@@ -359,20 +366,22 @@ class App extends Component {
       <p className="retirement-title">Retirement Income</p>
       <h1 className="retirement-heading">Starting Year 2056</h1>
       <div className="goals-container">
-        <div className="goals-details-container">
+        <div className="goals-details-container goal-mobile-view">
           <h1 className="goals-income">$300,000</h1>
           <p className="goals-text">My Goal</p>
           <hr className="hr-line" />
         </div>
-        <div className="goals-details-container">
-          <h1 className="goals-income">59%</h1>
-          <p className="goals-text">Goal Achieved</p>
-          <hr className="hr-line" />
-        </div>
-        <div className="goals-details-container">
-          <h1 className="goals-income">$300</h1>
-          <p className="goals-text">Est. Monthly Income</p>
-          <hr className="hr-line" />
+        <div className="percent-income-view">
+          <div className="goals-details-container">
+            <h1 className="goals-income">59%</h1>
+            <p className="goals-text">Goal Achieved</p>
+            <hr className="hr-line" />
+          </div>
+          <div className="goals-details-container">
+            <h1 className="goals-income">$300</h1>
+            <p className="goals-text">Est. Monthly Income</p>
+            <hr className="hr-line" />
+          </div>
         </div>
       </div>
       {this.renderContribution()}
@@ -456,6 +465,26 @@ class App extends Component {
     )
   }
 
+  renderMobileView = () => (
+    <div className="mobile-view-icons">
+      <button type="button" className="icon-button active-icon">
+        <CgHome className="icon active-color" />
+      </button>
+      <button type="button" className="icon-button">
+        <FaRegNewspaper className="icon" />
+      </button>
+      <button type="button" className="icon-button">
+        <BiSpreadsheet className="icon" />
+      </button>
+      <button type="button" className="icon-button">
+        <MdOutlinePermIdentity className="icon" />
+      </button>
+      <button type="button" className="icon-button">
+        <HiOutlineSearch className="icon" />
+      </button>
+    </div>
+  )
+
   render() {
     return (
       <div className="app-container">
@@ -465,6 +494,7 @@ class App extends Component {
           {this.renderRetirementIncome()}
           {this.renderRetirementStrategy()}
         </div>
+        <nav className="nav">{this.renderMobileView()}</nav>
       </div>
     )
   }
